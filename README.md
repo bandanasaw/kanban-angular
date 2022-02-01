@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+# Module - class - Decorate with @NgModule(Decorator) to define module
+ this is a kind of feature 
+
+# Component - class - decorate with @Component to define or declare a component
+
+# Services class @Injector
+
+# pipe @Pipe
+
+# Directives @Directive
