@@ -1,5 +1,46 @@
-.container{
+:host {
+    
+  .cardbox-main-container {
     display: flex;
-    border: 1px solid black;
-    height: 30px;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .cardbox-tasks-container {
+    display: flex;
+
+
+  }
+
+  .cardbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .cardbox-timesCircle-container {}
+
+  .cardbox-flag-container {}
+
+  .faEdit-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .card-options {
+    position: absolute;
+    right: 20px;
+    background: white;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    top: 30px;
+    border-radius: 10px;
+
+  }
 }

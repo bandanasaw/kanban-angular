@@ -1,17 +1,25 @@
-<div class="container">
-    <div>
-        <fa-icon [icon]="faTasks"></fa-icon>
-        Test the project
-    </div>
-    <div>
-        <div>
-   
-    <fa-icon [icon]="faTimesCircle"></fa-icon>
-            Sun Mar 19 2017
+<div class="cardbox-main-container">
+    <div class="cardbox-container">
+        <div class="cardbox-tasks-container">
+            <fa-icon [icon]="faTasks"></fa-icon>
+            {{taskInfo.name}}
         </div>
         <div>
+            <button (click)='onclick($event)' class="faEdit-btn">
+                <fa-icon [icon]="faEdit"></fa-icon>
+            </button>
+
+        </div>
+    </div>
+    <my-app-cardOptions *ngIf='showCardOptions' class="card-options"></my-app-cardOptions>
+    <div class="cardbox-container">
+        <div class="cardbox-timesCircle-container">
+            <fa-icon [icon]="faTimesCircle"></fa-icon>
+            {{taskInfo.dueDate}}
+        </div>
+        <div class="cardbox-flag-container">
             <fa-icon [icon]="faFlag"></fa-icon>
-            3
+            {{taskInfo.priority}}
         </div>
     </div>
 </div>
