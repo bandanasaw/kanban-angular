@@ -11,12 +11,14 @@
 
 .header-main-container {
   display: flex;
-
   height: 50px;
   background-color: rgba(211, 211, 211, 0.288);
   margin: -1px;
-
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
+
+
 
 .header-name-container {
   display: flex;
