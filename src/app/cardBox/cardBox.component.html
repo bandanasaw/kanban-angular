@@ -5,7 +5,7 @@
             {{taskInfo.name}}
         </div>
         <div>
-            <button (click)='onclick($event)' class="faEdit-btn">
+            <button *ngIf="showEditButton" (click)='onclick($event)' class="faEdit-btn" id="faEdit">
                 <fa-icon [icon]="faEdit"></fa-icon>
             </button>
 

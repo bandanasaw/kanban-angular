@@ -6,6 +6,8 @@ import { Component } from "@angular/core";
     styleUrls: ['./app.component.scss']
 })
 export class MyAppRootComponent {
+
+
     cards: Array<string> = ['New Task', 'On Hold', 'In Progress', 'Done'];
     cards1: any[] = [
         {
@@ -54,10 +56,24 @@ export class MyAppRootComponent {
                 { name: 'Test the List Edit Menu', dueDate: 'Sun Mar 19 2017', priority: 3 }
             ]
         },
+       
 
 
 
     ]
+
+
+    onAdded(name: string): void {
+        console.log(name, ' I am from app component');
+        this.cards1.push(
+            {
+                status: name,
+                info: [
+
+                ]
+            }
+        )
+    }
 
 }
 

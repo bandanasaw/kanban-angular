@@ -10,7 +10,7 @@
 
         </div>
     </div>
-    <my-app-addcard *ngIf='showAddCard' class='add-card-options'></my-app-addcard>
+    <my-app-addcard *ngIf='showAddCard'  class='add-card-options'></my-app-addcard>
     <div class="card-cardbox-container">
         <my-app-cardBox *ngFor="let task of tasks" [taskInfo]='task'></my-app-cardBox>
     </div>

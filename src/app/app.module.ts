@@ -8,10 +8,12 @@ import { CardBoxComponent } from "./cardBox/cardBox.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AddCardComponent } from "./Addcard/addCard.component";
 import { CardOptionsComponent } from "./cardOptions/cardOptions.component";
+import { AddCardFormComponent } from './add-card-form/add-card-form.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
-    declarations: [MyAppRootComponent, HeaderComponent, CardComponent,CardBoxComponent,AddCardComponent,CardOptionsComponent],
+    declarations: [MyAppRootComponent, HeaderComponent, CardComponent,CardBoxComponent,AddCardComponent,CardOptionsComponent, AddCardFormComponent],
     bootstrap: [MyAppRootComponent],
-    imports: [BrowserModule, CommonModule, FontAwesomeModule]
+    imports: [BrowserModule, CommonModule, FontAwesomeModule, FormsModule]
 })
 export class MyAppRootModule { }

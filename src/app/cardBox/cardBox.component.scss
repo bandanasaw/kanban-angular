@@ -1,20 +1,26 @@
 :host {
-    
+
+  // &:hover {
+  //   background-color: lightsteelblue;
+  // }
+
   .cardbox-main-container {
     display: flex;
     flex-direction: column;
     border: 1px solid lightgray;
     border-radius: 10px;
-
     width: 200px;
     padding: 10px;
     margin: 20px;
   }
+  .cardbox-main-container:hover{
+    // background-color: rgb(199, 209, 223);
+  background-color: #ddd;
+
+  }
 
   .cardbox-tasks-container {
     display: flex;
-
-
   }
 
   .cardbox-container {
@@ -22,6 +28,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 10px;
+   position: relative;
   }
 
   .cardbox-timesCircle-container {}
@@ -32,15 +39,22 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    color: rgb(54, 115, 196);
+  }
+
+  .faEdit-btn:hover {
+    color: rgb(14, 55, 109);
+
   }
 
   .card-options {
     position: absolute;
-    right: 20px;
+    right: 60px;
     background: white;
     box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
-    top: 30px;
+    top: 127px;
     border-radius: 10px;
+    z-index: 1;
 
   }
 }
