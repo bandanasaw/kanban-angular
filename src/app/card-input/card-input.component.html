@@ -1,0 +1,19 @@
+<div class="cardInput-main-container">
+    <a *ngIf="hideCardInputForm" (click)='hideCardInput()'>Add a Task...</a>
+   
+    <div class="cardInput-container" *ngIf="!hideCardInputForm">
+        <div class="cardInput-input-container">
+            <input type="text" placeholder="name"/>
+        </div>
+        <div class="cardInput-input-container">
+            <input type="date">
+        </div>
+        <div class="cardInput-input-container">
+            <input type="number">
+        </div>
+        <div class="button-container">
+            <button class="add-button" (click)='addForm()'>Add</button>
+            <button class="cancel-button" (click)='cancelForm()'>Cancel</button>
+        </div>
+    </div>
+</div>

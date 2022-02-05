@@ -9,5 +9,9 @@ import { faPenAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
 export class CardOptionsComponent{
     faPenAlt= faPenAlt;
     faTrash = faTrash;
+    remove(){
+        console.log('i am remove buttom clicked');
+
+    }
 
 }

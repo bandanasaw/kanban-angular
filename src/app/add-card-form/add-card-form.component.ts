@@ -18,11 +18,11 @@ export class AddCardFormComponent implements OnInit {
   cancelCard(){
     // this.cardName = 'tinkey';
     console.log(this.cardName,'i am cancel button');
-    this.hideAddCardForm = false;
+    this.hideAddCardForm = true;
   
   }
   hideAddCard(){
-    this.hideAddCardForm = true;
+    this.hideAddCardForm = false;
 
   }
     

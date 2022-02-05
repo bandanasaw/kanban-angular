@@ -22,6 +22,7 @@ export class CardBoxComponent {
     // buttonDisabled : boolean = true;
     showEditButton: boolean = false;
     showCardOptions: boolean = false;
+            
     onclick(e: any): void {
         this.showCardOptions = true;
         e.stopPropagation();

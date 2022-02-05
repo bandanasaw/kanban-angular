@@ -2,23 +2,27 @@
     <div class="cardOptions-container">
         <div>
             <fa-icon [icon]="faPenAlt"></fa-icon>
-            Edit
+           <button>Edit</button>
         </div>
         <div>
             <fa-icon [icon]="faTrash"></fa-icon>
-            Remove
+            <button (click)="remove()"> Remove</button>
+           
         </div>
         <div>
             <fa-icon [icon]="faPenAlt"></fa-icon>
-            Move to On Hold
+            <button> Move to On Hold</button>
+           
         </div>
         <div>
             <fa-icon [icon]="faPenAlt"></fa-icon>
-            Move to In Progress
+            <button> Move to In Progress</button>
+          
         </div>
         <div>
             <fa-icon [icon]="faPenAlt"></fa-icon>
-            Move to Done
+            <button> Move to Done</button>
+         
         </div>
     </div>
 </div>
