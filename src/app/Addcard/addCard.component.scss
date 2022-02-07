@@ -1,10 +1,17 @@
-.addCard-main-container{
-    display: flex;
-    flex-direction: column;
-    // border: 1px solid lightgray;
-    border-radius: 10px;
-    width: 130px;
-    height: 100px;
-    padding: 20px 20px 20px 20px;
+.addCard-main-container {
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 130px;
+  height: 100px;
+  padding: 20px 20px 20px 20px;
 }
-.addCard-container{}
+
+.addCard-container {}
+
+button {
+  background-color: transparent;
+  border: none;
+
+}

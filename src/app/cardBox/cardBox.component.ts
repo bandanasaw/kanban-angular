@@ -1,5 +1,6 @@
-import { Component, EventEmitter, HostBinding, HostListener, Input, Output } from "@angular/core";
-import { faEdit, faFlag, faTasks, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { Component, HostBinding, HostListener, Input } from "@angular/core";
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { faEdit, faFlag, faTasks } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,17 +14,16 @@ export class CardBoxComponent {
     @Input() taskInfo: any;
 
     @HostBinding('class.my-app-cardbox-class') myClass: boolean = true;
-    //  @Output() addedCardboxData: EventEmitter<any> = new EventEmitter();
-    
+
 
     faTasks = faTasks;
-    faTimesCircle = faTimesCircle;
+    faTimesCircle = faClock;
     faFlag = faFlag;
     faEdit = faEdit;
     // buttonDisabled : boolean = true;
     showEditButton: boolean = false;
     showCardOptions: boolean = false;
-            
+
     onclick(e: any): void {
         this.showCardOptions = true;
         e.stopPropagation();
@@ -38,13 +38,13 @@ export class CardBoxComponent {
     }
 
     @HostListener('mouseenter')
-    mouseOver(){
+    mouseOver() {
         console.log(' I am oon cardbox')
         this.showEditButton = true;
     }
 
     @HostListener('mouseleave')
-    mouseOut(){
+    mouseOut() {
         console.log(' I am oon cardbox on out')
         this.showEditButton = false;
     }

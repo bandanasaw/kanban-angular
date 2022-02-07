@@ -10,7 +10,13 @@
 }
 a{
     color: rgb(78, 78, 172);
+   
 
+}
+a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #337ab7;
 }
 
 
