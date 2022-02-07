@@ -12,6 +12,7 @@
     width: 200px;
     padding: 10px;
     margin: 20px;
+    position: relative;
   }
   .cardbox-main-container:hover{
     // background-color: rgb(199, 209, 223);
@@ -49,10 +50,12 @@
 
   .card-options {
     position: absolute;
-    right: 60px;
+    // right: 60px;
+    right: 25px;
     background: white;
     box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
-    top: 127px;
+    // top: 127px;
+    top: 40px;
     border-radius: 10px;
     z-index: 1;
 

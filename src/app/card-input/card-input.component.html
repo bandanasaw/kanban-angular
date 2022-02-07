@@ -1,18 +1,30 @@
 <div class="cardInput-main-container">
     <a *ngIf="hideCardInputForm" (click)='hideCardInput()'>Add a Task...</a>
-   
+
     <div class="cardInput-container" *ngIf="!hideCardInputForm">
-        <div class="cardInput-input-container">
-            <input type="text" placeholder="name"/>
-        </div>
-        <div class="cardInput-input-container">
-            <input type="date">
-        </div>
-        <div class="cardInput-input-container">
-            <input type="number">
-        </div>
+        <form [formGroup]="taskDataForm">
+            <div class="cardInput-input-container">
+                <input type="text"  placeholder="name" formControlName='name' />
+                <span *ngIf="taskDataForm.get('name')?.invalid && taskDataForm.get('name')?.touched && taskDataForm.get('name')?.dirty">Task name in invalid</span>
+            </div>
+            <div class="cardInput-input-container">
+                <input type="date" formControlName='dueDate'>
+                <span *ngIf="taskDataForm.get('duedate')?.invalid && taskDataForm.get('dueDate')?.touched">select the date</span>
+            </div>
+            <div class="cardInput-input-container">
+
+                <select formControlName='priority' >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+            </div>
+        </form>
         <div class="button-container">
-            <button class="add-button" (click)='addForm()'>Add</button>
+            <button class="add-button" [disabled]="taskDataForm.invalid" (click)='addForm()'>Add</button>
             <button class="cancel-button" (click)='cancelForm()'>Cancel</button>
         </div>
     </div>

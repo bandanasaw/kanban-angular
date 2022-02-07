@@ -2,7 +2,7 @@
 <app-add-card-form (added)='onAdded($event)'></app-add-card-form>
 
 <div class="app-container">
-    <my-app-card *ngFor='let card of cards1' [name]='card.status' [tasks]='card.info' ></my-app-card>
+    <my-app-card *ngFor='let card of cards1' [name]='card.status' [tasks]='card.info' (addedCardboxData)='cardBoxData($event)'  ></my-app-card>
     <!-- <my-app-card name='On Hold'></my-app-card>
     <my-app-card name='InProgress'></my-app-card>
     <my-app-card name='Done'></my-app-card> -->

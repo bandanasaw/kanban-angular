@@ -30,6 +30,15 @@ input{
     border: 1px solid lightgray;
     margin-bottom: 20px;
 }
+select{
+    display: flex;
+    width: 220px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+
+}
 .button-container{
     display: flex;
 }

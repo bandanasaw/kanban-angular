@@ -4,12 +4,12 @@
     <div class="addCardForm-container" *ngIf="!hideAddCardForm">
         <div class="addCardForm-input-container">
 
-            <input type='text' class="addCardForm-input" placeholder="List Name" #cardname='ngModel' required
-                minlength="0" [(ngModel)]='cardName'>
-            <!-- <div>
-                <span *ngIf='cardname.invalid'>List Name is required</span>
+            <input type='text' class="addCardForm-input"  placeholder="List Name" #cardname='ngModel' required
+                minlength="3" [(ngModel)]='cardName'>
+            <div>
+                <span *ngIf='cardname.invalid && cardname.touched' >List Name is required</span>
 
-            </div> -->
+            </div>
         </div>
         <div class="addCardForm-button-container">
             <button class='addCardForm-add-btn' (click)='addCard(cardname)'>Add</button>

@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -10,6 +10,7 @@ import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 export class CardComponent {
     @Input() name: any;
     @Input() tasks: any[] = [];
+    @Output() addedCardboxData: EventEmitter<any> = new EventEmitter();
 
     faEllipsisH = faEllipsisH;
     showAddCard: boolean = false;
@@ -22,4 +23,13 @@ export class CardComponent {
         }
         document.body.addEventListener('click', event);
     }
+
+    addCardBox(cardDataInfo: any) {
+        console.log(cardDataInfo, 'cardDataInfo');
+        this.addedCardboxData.emit({ name: this.name, value: cardDataInfo });
+
+
+    }
+
+
 }

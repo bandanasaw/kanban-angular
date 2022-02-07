@@ -1,4 +1,4 @@
-import { Component, HostBinding, HostListener, Input } from "@angular/core";
+import { Component, EventEmitter, HostBinding, HostListener, Input, Output } from "@angular/core";
 import { faEdit, faFlag, faTasks, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -13,6 +13,7 @@ export class CardBoxComponent {
     @Input() taskInfo: any;
 
     @HostBinding('class.my-app-cardbox-class') myClass: boolean = true;
+    //  @Output() addedCardboxData: EventEmitter<any> = new EventEmitter();
     
 
     faTasks = faTasks;

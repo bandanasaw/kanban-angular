@@ -56,7 +56,7 @@ export class MyAppRootComponent {
                 { name: 'Test the List Edit Menu', dueDate: 'Sun Mar 19 2017', priority: 3 }
             ]
         },
-       
+
 
 
 
@@ -74,6 +74,17 @@ export class MyAppRootComponent {
             }
         )
     }
+
+    cardBoxData(task: any): void {
+        console.log(task, 'i am data info');
+
+        const tasks = this.cards1.find(x => x.status === task.name);
+        task.value.dueDate = new Date(task.value.dueDate).toDateString();
+        tasks.info.push(task.value);
+        console.log(tasks)
+    }
+
+
 
 }
 
