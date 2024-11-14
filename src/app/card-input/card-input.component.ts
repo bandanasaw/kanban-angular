@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-card-input',
@@ -10,11 +10,11 @@ export class CardInputComponent {
   hideCardInputForm: boolean = true;
 
   @Output() addedCardbox : EventEmitter<any> = new EventEmitter();
-  taskDataForm: FormGroup = new FormGroup(
+  taskDataForm: UntypedFormGroup = new UntypedFormGroup(
     {
-      name: new FormControl('', [Validators.required, Validators.maxLength(20)]),
-      dueDate: new FormControl('',Validators.required),
-      priority: new FormControl('',Validators.required)
+      name: new UntypedFormControl('', [Validators.required, Validators.maxLength(20)]),
+      dueDate: new UntypedFormControl('',Validators.required),
+      priority: new UntypedFormControl('',Validators.required)
     });
 
   addForm() {
